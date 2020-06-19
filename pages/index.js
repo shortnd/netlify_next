@@ -23,8 +23,8 @@ export default function IndexPage() {
         <h1 className="title">Next.js + Tailwind CSS</h1>
       </div>
       <div className="container mx-auto px-3">
-        <form method="POST" action="/success">
-          <div className="flex flex-col">
+        <form method="POST" action="/success" data-netlify="true">
+          <div className="flex flex-col mb-3">
             <label htmlFor="firstName" className="flex flex-col">
               First Name
               <input type="text" name="firstName" id="firstName" {...formik.getFieldProps('firstName')} className={`border py-2 px-3 rounded ${formik.errors.firstName ? 'border-red-500' : ''}`}/>
@@ -35,7 +35,7 @@ export default function IndexPage() {
               </div>
             ) : null}
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-3">
             <label htmlFor="lastName" className="flex flex-col">
               Last Name
               <input type="text" name="lastName" id="lastName" {...formik.getFieldProps('lastName')} className={`border py-2 px-3 rounded ${formik.errors.lastName ? 'border-red-500' : ''}`}/>
@@ -46,7 +46,7 @@ export default function IndexPage() {
               </div>
             ) : null}
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-3">
             <label htmlFor="email" className="flex flex-col">
               Email
               <input type="email" name="email" id="email" {...formik.getFieldProps('email')} className={`border py-2 px-3 rounded ${formik.errors.email ? 'border-red-500' : ''}`}/>
